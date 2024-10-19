@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div class="container mx-auto mt-5">
+    <form method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <h3 class="text-center text-2xl font-bold mb-6">Create Your Account</h3>
+
+        <div class="form-group mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+                placeholder="Enter Email"
+                required
+            />
+        </div>
+
+        <div class="form-group mb-4">
+            <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                class="form-control mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+                placeholder="Enter Username"
+                required
+            />
+        </div>
+
+        <div class="form-group mb-4">
+            <label for="password1" class="block text-sm font-medium text-gray-700">Password</label>
+            <input
+                type="password"
+                id="password1"
+                name="password1"
+                class="form-control mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+                placeholder="Enter Password"
+                required
+            />
+        </div>
+
+        <div class="form-group mb-4">
+            <label for="password2" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+            <input
+                type="password"
+                id="password2"
+                name="password2"
+                class="form-control mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+                placeholder="Confirm Password"
+                required
+            />
+        </div>
+
+        <div class="flex items-center justify-center mt-6">
+            <button
+                type="submit"
+                class="btn btn-primary w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150"
+            >
+                Sign Up
+            </button>
+        </div>
+
+        <p class="mt-4 text-center text-gray-600">
+            Already have an account? <a href="/login" class="text-blue-600 hover:underline">Log In</a>
+        </p>
+    </form>
+</div>
+{% endblock %}
